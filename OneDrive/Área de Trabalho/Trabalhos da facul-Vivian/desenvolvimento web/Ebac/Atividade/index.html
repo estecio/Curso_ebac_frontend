@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validação de Números</title>
+
+    <link rel="stylesheet" href="./style.css"> <!--conecta o html com o css-->
+</head>
+<body>
+
+    <div class="container"> <!--uma caixa que divide os elementos e facilita na hora de estilizar Na prática, o container cria uma "caixa" invisível que limita o espaço que o seu site pode ocupar. Ele geralmente possui três propriedades principais no CSS:
+max-width: Limita a largura máxima da caixa (ex: 
+).
+margin: 0 auto: Centraliza essa caixa perfeitamente no meio da tela.
+padding: Cria um respiro para o texto não encostar nas bordas laterais.  -->
+        <h1>Validação de Números</h1>
+
+        <form id="formulario"> <!--inicia o formulario, o id é essencial para que o JS consiga identificar quando o usuario clicar no botão de enviar -->
+
+            <input 
+            
+                type="number" 
+                id="campoA" 
+                placeholder="Digite o número A" 
+                required
+            >
+<!--type="number": Restringe o campo para aceitar apenas números.
+
+id="campoA" / id="campoB": Identificadores únicos para capturar os valores via script.
+
+placeholder="...": O texto cinza explicativo que desaparece quando você começa a digitar.
+
+required: Atributo de validação nativa que impede o envio se o campo estiver vazio.-->
+            <input 
+                type="number" 
+                id="campoB" 
+                placeholder="Digite o número B"
+                required
+            >
+<!---->
+            <button type="submit"> <!--Botão que dispara o evento de submissão do formulário.-->
+                Enviar
+            </button>
+
+        </form>
+
+        <p id="mensagem" class="mensagem"></p>
+    </div>
+
+    <script src="./main.js"></script>
+    <!--<script src="./main.js"></script>: Importa o arquivo JavaScript. Ele está no final do body para garantir que o navegador carregue todo o HTML antes de tentar executar qualquer lógica de programação.-->
+</body>
+</html>
